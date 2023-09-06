@@ -11,3 +11,32 @@ function makeRows(rows, cols) {
 };
 
 makeRows(16, 16);
+
+function randomRgbColor(){
+  let r = Math.floor(Math.random() * 256); // Random between 0-255
+  let g = Math.floor(Math.random() * 256); // Random between 0-255
+  let b = Math.floor(Math.random() * 256); // Random between 0-255
+  return 'rgb(' + r + ',' + g + ',' + b + ')';
+};
+
+
+const cells = document.querySelectorAll(".grid-item");
+
+
+
+cells.forEach((e)=> {
+
+  e.addEventListener("mouseover", (el) => {
+
+    
+    el.target.style.backgroundColor =randomRgbColor();
+  
+  })
+})
+
+
+
+
+
+
+
